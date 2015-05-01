@@ -76,19 +76,16 @@ namespace KuasCore.Dao.Impl
 
         public Employee GetEmployeeByName(string Name)
         {
-            string command = @"SELECT * FROM Employee WHERE Name = @Name TOP";
+            string command = @"SELECT * FROM Employee WHERE Name = @Name ";
 
             IDbParameters parameters = CreateDbParameters();
             parameters.Add("Name", DbType.String).Value = Name;
-
-        
-
             IList<Employee> employees = ExecuteQueryWithRowMapper(command, parameters);
             if (employees.Count > 0)
             {
-            return   employees[0];
+            return     employees[0];
             }
-
+            
             return null;
         }
     }

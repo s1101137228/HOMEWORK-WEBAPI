@@ -36,13 +36,13 @@ namespace MyWebApp.Controllers
             }
         }
 
-        [HttpGet]
+        //[HttpGet]
 
-        public Employee GetEmployeeById(string id)
-        {
-           return EmployeeService.GetEmployeeById(id);
+        //public Employee GetEmployeeById(string id)
+        //{
+        //   return EmployeeService.GetEmployeeById(id);
 
-        }
+        //}
         [HttpGet]
 
         public Employee GetEmployeeByName(string name)
